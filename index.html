@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
   <body style="margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; font-size: 2rem; text-align: center;">
-    Ja :) (iedere vrijdag, zaterdag en zondag)
+    <script>
+      const day = new Date().getDay(); // 0=Sunday, 5=Friday, 6=Saturday
+      document.body.textContent = (day === 5 || day === 6 || day === 0) ? "Ja :)" : "Nee :(";
+    </script>
   </body>
 </html>
